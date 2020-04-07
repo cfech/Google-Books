@@ -1,0 +1,11 @@
+footer {
+    background-color: #6B7380;
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: ghostwhite;
+    text-align: center;
+    min-height: 50px;
+    margin-top: 20px;
+}

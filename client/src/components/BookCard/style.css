@@ -1,0 +1,12 @@
+.BookResults{
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+
+    padding: 15px;
+    background-color: white;
+}
+
+.padL{
+    padding-left: 10px;
+}
