@@ -9,16 +9,13 @@ import API from "../components/API"
 class Home extends React.Component {
     // Setting our component's initial state
 
-    componentDidMount() {
-        API.ApiSearch()
-            .then(res => {
+    // componentDidMount() {
+    //     API.ApiSearch()
+    //         .then(res => {
                 
-                console.log(res)
-            }).catch(err => console.log(err))
-    }
-
-
-
+    //             console.log(res.data.items)
+    //         }).catch(err => console.log(err))
+    // }
 
 
 
