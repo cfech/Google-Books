@@ -14,7 +14,10 @@ function Search(props) {
             <div className="row book">
                 <p>Book</p>
             </div>
-            <input className = "col-12"placeholder="book search" onChange={props.handleInputChange}></input>
+            <form>
+            <input className = "col-10"placeholder="book search" onChange={props.handleInputChange}></input>
+            <button type= "submit" onClick = {props.handleSubmit}>search</button>
+            </form>
         </div>
     );
 }

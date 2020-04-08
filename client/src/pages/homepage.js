@@ -6,24 +6,48 @@ import Results from "../components/Results/index"
 import API from "../components/API"
 
 
-class Home extends React.Component {
+
+function Home() {
     // Setting our component's initial state
 
     // componentDidMount() {
     //     API.ApiSearch()
     //         .then(res => {
-                
+
     //             console.log(res.data.items)
     //         }).catch(err => console.log(err))
     // }
+    const [searchTerm, setSearchTerm] = useState("")
 
 
-    handleInputChange = event => {
-        const searchTerm = event.target.value;
+    const handleInputChange = event => {
+        setSearchTerm(event.target.value)
+
         console.log(searchTerm)
     }
 
-render(){
+
+
+    const [books, setBooks] = useState([])
+
+
+    const ApiSearch = () => {
+        API.ApiSearch(searchTerm)
+            .then(res => {
+                console.log(res.data.items)
+                setBooks(res.data.items)
+            }).catch(err => console.log(err))
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        ApiSearch()
+    }
+    // useEffect(() => {
+
+    // },[])
+
+
 
     return (
         <Container fluid>
@@ -34,18 +58,18 @@ render(){
             </Row>
             <Row>
                 <Col size="md-12">
-                    <Search handleInputChange = {this.handleInputChange}/>
+                    <Search handleInputChange={handleInputChange}  searchTerm={searchTerm} handleSubmit={handleSubmit} />
                 </Col>
             </Row>
 
-            <Results />
+            <Results books={books}/>
 
 
 
         </Container>
     );
 }
-}
+
 
 
 export default Home;

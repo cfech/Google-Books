@@ -1,11 +1,11 @@
 // Imports
 import axios from "axios";
-var searchTerm = "cook"
-const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`;
 
 //api call
 export default {
-    ApiSearch: function () {
+    ApiSearch: function (searchTerm) {
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`;
+
         console.log(url)
         return axios.get(url)
 
