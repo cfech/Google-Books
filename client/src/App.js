@@ -3,16 +3,16 @@ import React from "react";
 import Nav from "./components/Nav";
 import Homepage from "./pages/homepage";
 import Footer from "./components/footer/index"
-import "./styles/styles.css"
+import"./styles/styles.css"
 import Saved from "./pages/saved";
 
 function App() {
   return (
     <div>
       <Nav />
-      <Homepage />
-      {/* <Saved/> */}
-      <Footer />
+     <Homepage/>
+     {/* <Saved/> */}
+     <Footer/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 // Imports
 import axios from "axios";
-var searchTerm = "how to"
+var searchTerm = "cook"
 const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`;
 
 //api call

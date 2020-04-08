@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function Search() {
+function Search(props) {
+
+
+   
+    
     return (
         <div className="jumbotron mySearch">
             <div className="row">
@@ -10,7 +14,7 @@ function Search() {
             <div className="row book">
                 <p>Book</p>
             </div>
-            <input className = "col-12"placeholder="book search"></input>
+            <input className = "col-12"placeholder="book search" onChange={props.handleInputChange}></input>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function BookCard({ name, subtitle, author, image, description, link}) {
+function BookCard({ name, subtitle, author, image, description, link }) {
     return (
         <div className="BookResults col-12 mb-3">
 
@@ -17,7 +17,13 @@ function BookCard({ name, subtitle, author, image, description, link}) {
             </div>
 
             <div className="row padL">
-                <p>{subtitle}</p>
+                <p>{
+                    subtitle !== undefined && subtitle !== ""
+                        ?
+                        subtitle
+                        :
+                        "N/A"
+                }</p>
             </div>
 
             <div className="row padL">
@@ -26,7 +32,16 @@ function BookCard({ name, subtitle, author, image, description, link}) {
 
             <div className="row padL">
                 <p>   <img src={image} className="float-left mr-2 col-3 "></img>
-                    {description}
+
+
+                    {description !== undefined
+                        ?
+                        description
+                        : 
+                        "A book about " + name
+                    }
+
+                    
                 </p>
             </div>
         </div>

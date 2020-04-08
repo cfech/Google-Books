@@ -18,6 +18,10 @@ class Home extends React.Component {
     // }
 
 
+    handleInputChange = event => {
+        const searchTerm = event.target.value;
+        console.log(searchTerm)
+    }
 
 render(){
 
@@ -30,7 +34,7 @@ render(){
             </Row>
             <Row>
                 <Col size="md-12">
-                    <Search />
+                    <Search handleInputChange = {this.handleInputChange}/>
                 </Col>
             </Row>
 
