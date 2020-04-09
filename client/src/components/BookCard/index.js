@@ -1,24 +1,23 @@
 import React from "react";
 import "./style.css";
 import Api from "../../utils/API"
+import { PromiseProvider } from "mongoose";
 
-function BookCard({ name, subtitle, author, image, description, link }) {
+function BookCard({ name, subtitle, author, image, description, link, handleSave }) {
 
     const handleSubmit = event => {
         event.preventDefault()
         Api.saveBook({
             name, subtitle, author, image, description, link
-        }).then(()=>{
-            alert("saved")
+        }).then(() => {
+            handleSave()
         })
     }
 
     return (
         <div className="BookResults col-12 mb-3">
 
-{/* <div class="alert alert-success" role="alert">
-  This is a success alert—check it out!
-</div> */}
+
 
 
 
@@ -34,7 +33,7 @@ function BookCard({ name, subtitle, author, image, description, link }) {
 
 
                 <form className="viewBtn">
-                    <input type="submit" value="Save" onClick ={handleSubmit} />
+                    <input type="submit" value="Save" onClick={handleSubmit} />
                 </form>
                 {/* <button className="saveBtn" onClick={handleSubmit}>Save</button> */}
             </div>

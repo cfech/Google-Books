@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./style.css"
 
 function Nav() {
@@ -10,18 +11,11 @@ function Nav() {
 
 
     <nav className="navbar navbar-expand-lg myNav">
-      <a className="navbar-brand" href="/">
-        GOOGLE BOOKS
-      </a>
-    
-        <a className="navbar-brand" href="/search">
-          Search
-      </a>
+      <Link className= "navbar-brand" to="/"> GOOGLE BOOKS</Link>
+
+      <Link className= "navbar-brand" to="/search"> Search</Link>
      
- 
-      <a className="navbar-brand" href="/saved">
-        Saved
-      </a>
+      <Link className= "navbar-brand" to="/saved"> Saved</Link>
     
     </nav>
   );

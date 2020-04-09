@@ -5,22 +5,18 @@ import Api from "../../utils/API"
 function SavedBook({ name, author, id, description, link, image, subtitle }) {
 
     const handleSubmit = event => {
-        
         console.log(id)
         Api.deleteBook(id)
     }
-
 
     return (
         <div className="BookResults col-12 mb-3">
 
             <div className="row padL">
                 <h4>{name}</h4>
-
             </div>
 
             <div className="row justify-content-end pr-2">
-
                 <form action={link} className="viewBtn">
                     <input type="submit" value="View" />
                 </form>
@@ -28,9 +24,7 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
                 <form className="viewBtn">
                     <input type="submit" value="Delete" onClick={handleSubmit} />
                 </form>
-
             </div>
-
 
             <div className="row padL">
                 <p>{

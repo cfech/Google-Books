@@ -8,7 +8,16 @@ import API from "../components/API"
 
 
 function Home() {
-        // Setting our component's initial state
+    // Setting our component's initial state
+    const [saved, setSaved] = useState(false)
+
+    const handleSave = event => {
+        setSaved(true)
+
+        setTimeout(() => {
+            setSaved(false)
+        }, 2000);
+    }
 
     const [searchTerm, setSearchTerm] = useState("Harry Potter")
 
@@ -40,15 +49,24 @@ function Home() {
         <Container fluid>
             <Row>
                 <Col size="md-12">
-                    <Jumbotron className = "m-2" />
+                    <Jumbotron className="m-2" />
                 </Col>
+
+             
             </Row>
             <Row>
                 <Col size="md-12">
                     <Search handleInputChange={handleInputChange} searchTerm={searchTerm} handleSubmit={handleSubmit} />
                 </Col>
-            </Row>
-            <Results books={books} />
+            </Row>   {saved ?
+                    <div className="alert alert-success " role="alert">
+                        Saved!
+                </div>
+
+                    :
+                    null
+                }
+            <Results books={books} handleSave={handleSave} />
         </Container>
     );
 }
