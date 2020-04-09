@@ -1,42 +1,38 @@
-.BookResults{
+.BookResults {
     border: solid;
     border-color: #223a5e;
     border-width: 3px;
-
     padding: 15px;
-    /* background-color: white; */
     background: linear-gradient(to bottom, white 0%, rgb(181, 179, 179) 100%)
-    
-   
 }
 
-.padL{
+.padL {
     padding-left: 10px;
 }
 
-img{
+img {
     max-width: auto;
     max-height: 267px;
 }
 
-.authorName{
+.authorName {
     font-size: 20px;
 }
 
-.description{
+.description {
     font-family: 'Gotu', sans-serif;
 }
 
-.saveBtn, .viewBtn{
+.saveBtn, .viewBtn {
     margin: 5px;
 }
 
-.viewBtn :hover{
+.viewBtn :hover {
     background-color: #E67E22;
     color: #223a5e;
 }
 
-.saveBtn :hover{
+.saveBtn :hover {
     background-color: #E67E22;
     color: #223a5e;
 }

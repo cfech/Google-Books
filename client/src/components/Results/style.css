@@ -1,7 +1,7 @@
-.results{
+.results {
     height: auto;
     border: outset;
-    border-color:#223a5e;
+    border-color: #223a5e;
     border-width: 10px;
     max-height: 600px;
     overflow-y: auto;

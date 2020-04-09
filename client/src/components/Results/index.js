@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import BookCard from "../BookCard/index"
 import "./style.css";
 
+//Building result component
 function Result(props) {
 
     return (
@@ -16,19 +17,11 @@ function Result(props) {
                             item.volumeInfo.imageLinks.smallThumbnail
                             :
                             "https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg"} 
-                            
-                            
-                handleSave = {props.handleSave}              
-                            />
-         
-
-
-
+                handleSave = {props.handleSave}/>
             )}
-
-
         </div>
     );
 }
 
+//Exporting result component
 export default Result;

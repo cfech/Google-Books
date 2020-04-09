@@ -1,10 +1,9 @@
-body{
+body {
     background-color: #E67E22;
-    
     font-family: 'Girassol', cursive;
 }
 
-.alert{
+.alert {
     width: 200px;
-    margin-top: -10px 
+    margin-top: -10px
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 import Api from "../../utils/API"
-import { PromiseProvider } from "mongoose";
 
+//Building bookCard component
 function BookCard({ name, subtitle, author, image, description, link, handleSave }) {
 
     const handleSubmit = event => {
@@ -17,11 +17,6 @@ function BookCard({ name, subtitle, author, image, description, link, handleSave
     return (
         <div className="BookResults col-12 mb-3">
 
-
-
-
-
-
             <div className="row padL">
                 <h4>{name}</h4>
             </div>
@@ -35,7 +30,7 @@ function BookCard({ name, subtitle, author, image, description, link, handleSave
                 <form className="viewBtn">
                     <input type="submit" value="Save" onClick={handleSubmit} />
                 </form>
-                {/* <button className="saveBtn" onClick={handleSubmit}>Save</button> */}
+
             </div>
 
             <div className="row padL">
@@ -44,8 +39,7 @@ function BookCard({ name, subtitle, author, image, description, link, handleSave
                         ?
                         subtitle
                         :
-                        "N/A"
-                }</p>
+                        "N/A"}</p>
             </div>
 
             <div className="row padL">
@@ -55,19 +49,16 @@ function BookCard({ name, subtitle, author, image, description, link, handleSave
             <div className="row padL">
                 <p className="description">    <img src={image} className="float-left mr-2 col-3 "></img>
 
-
                     {description !== undefined
                         ?
                         description
                         :
-                        "A book about " + name
-                    }
+                        "A book about " + name}</p>
 
-
-                </p>
             </div>
         </div>
     );
 }
 
+//Exporting bookCard component
 export default BookCard;

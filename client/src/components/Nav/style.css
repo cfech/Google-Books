@@ -1,12 +1,13 @@
-.myNav{
+.myNav {
     background-color: #223a5e;
-   height: 80px;
+    height: 80px;
 }
 
-a{
+a {
     color: white;
 }
-a:hover{
+
+a:hover {
     color: white;
     text-decoration: underline;
 }

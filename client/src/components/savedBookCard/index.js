@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import Api from "../../utils/API"
 
+//Building savedResult component
 function SavedBook({ name, author, id, description, link, image, subtitle }) {
 
     const handleSubmit = event => {
@@ -32,8 +33,7 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
                         ?
                         subtitle
                         :
-                        "N/A"
-                }</p>
+                        "N/A"}</p>
             </div>
 
             <div className="row padL">
@@ -46,12 +46,12 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
                         ?
                         description
                         :
-                        "A book about " + name
-                    }
+                        "A book about " + name}
                 </p>
             </div>
         </div>
     );
 }
 
+//Exporting savedBook component
 export default SavedBook;

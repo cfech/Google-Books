@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+//Building jumbotron component
 function Jumbotron() {
   return (
     <div className="jumbotron myJumboTron">
@@ -10,4 +11,5 @@ function Jumbotron() {
   );
 }
 
+//Exporting jumbotron component
 export default Jumbotron;

@@ -1,5 +1,4 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -9,15 +8,15 @@ require("dotenv").config()
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
 app.use(routes);
 
-
-console.log("Username" , process.env.DBUser)
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || `mongodb://${process.env.DBUser}:${process.env.DBPass}@ds041934.mlab.com:41934/heroku_0zq0xjxh`);
 
