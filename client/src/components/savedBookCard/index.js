@@ -1,7 +1,16 @@
 import React from "react";
 import "./style.css";
+import Api from "../../utils/API"
 
 function SavedBook({ name, author, id, description, link, image, subtitle }) {
+
+    const handleSubmit = event => {
+        
+        console.log(id)
+        Api.deleteBook(id)
+    }
+
+
     return (
         <div className="BookResults col-12 mb-3">
 
@@ -13,13 +22,13 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
             <div className="row justify-content-end pr-2">
 
                 <form action={link} className="viewBtn">
-                    <input type="submit" value="View"  />
+                    <input type="submit" value="View" />
                 </form>
 
                 <form className="viewBtn">
-                    <input type="submit" value="Delete" />
+                    <input type="submit" value="Delete" onClick={handleSubmit} />
                 </form>
-                
+
             </div>
 
 
@@ -31,20 +40,14 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
                         :
                         "N/A"
                 }</p>
-
             </div>
 
             <div className="row padL">
                 <h5>{author}</h5>
-
             </div>
-
-
 
             <div className="row padL">
                 <p>   <img src={image} className="float-left mr-2 col-3 "></img>
-
-
                     {description !== undefined
                         ?
                         description
@@ -53,9 +56,6 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
                     }
                 </p>
             </div>
-
-
-
         </div>
     );
 }

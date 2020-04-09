@@ -18,10 +18,7 @@ const [savedBooks , setSavedBooks]= useState([])
     },[])
 
 
-    // const handleSubmit = event => {
-    //     event.preventDefault()
-    //     ApiSearch()
-    // }
+    
 
     return (
         <Container fluid>
@@ -30,7 +27,7 @@ const [savedBooks , setSavedBooks]= useState([])
                     <Jumbotron />
                 </Col>
             </Row>
-            <SavedResults savedBooks={savedBooks} />
+            <SavedResults savedBooks={savedBooks}/>
         </Container>
     );
 }

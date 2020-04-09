@@ -8,12 +8,20 @@ function BookCard({ name, subtitle, author, image, description, link }) {
         event.preventDefault()
         Api.saveBook({
             name, subtitle, author, image, description, link
+        }).then(()=>{
+            alert("saved")
         })
     }
 
-
     return (
         <div className="BookResults col-12 mb-3">
+
+{/* <div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div> */}
+
+
+
 
             <div className="row padL">
                 <h4>{name}</h4>
