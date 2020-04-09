@@ -6,16 +6,20 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
         <div className="BookResults col-12 mb-3">
 
             <div className="row padL">
-                <p>{name}</p>
+                <h4>{name}</h4>
 
             </div>
 
             <div className="row justify-content-end pr-2">
 
-                <form action={link}>
-                    <input type="submit" value="View" />
+                <form action={link} className="viewBtn">
+                    <input type="submit" value="View"  />
                 </form>
-                <button className="float-right">Delete</button>
+
+                <form className="viewBtn">
+                    <input type="submit" value="Delete" />
+                </form>
+                
             </div>
 
 
@@ -31,7 +35,7 @@ function SavedBook({ name, author, id, description, link, image, subtitle }) {
             </div>
 
             <div className="row padL">
-                <p>{author}</p>
+                <h5>{author}</h5>
 
             </div>
 

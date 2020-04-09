@@ -16,14 +16,19 @@ function BookCard({ name, subtitle, author, image, description, link }) {
         <div className="BookResults col-12 mb-3">
 
             <div className="row padL">
-                <p>{name}</p>
+                <h4>{name}</h4>
             </div>
 
             <div className="row justify-content-end pr-2">
-                <form action={link}>
+                <form action={link} className="viewBtn">
                     <input type="submit" value="View" />
                 </form>
-                <button className="float-right" onClick={handleSubmit}>Save</button>
+
+
+                <form className="viewBtn">
+                    <input type="submit" value="Save" onClick ={handleSubmit} />
+                </form>
+                {/* <button className="saveBtn" onClick={handleSubmit}>Save</button> */}
             </div>
 
             <div className="row padL">
@@ -37,21 +42,21 @@ function BookCard({ name, subtitle, author, image, description, link }) {
             </div>
 
             <div className="row padL">
-                <p>{author}</p>
+                <h6 className="authorName">{author}</h6>
             </div>
 
             <div className="row padL">
-                <p>   <img src={image} className="float-left mr-2 col-3 "></img>
+                <p className="description">    <img src={image} className="float-left mr-2 col-3 "></img>
 
 
                     {description !== undefined
                         ?
                         description
-                        : 
+                        :
                         "A book about " + name
                     }
 
-                    
+
                 </p>
             </div>
         </div>

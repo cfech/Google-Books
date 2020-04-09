@@ -3,16 +3,26 @@ import "./style.css"
 
 function Nav() {
   return (
+
+
+
+
+
+
     <nav className="navbar navbar-expand-lg myNav">
       <a className="navbar-brand" href="/">
-        Google Books
+        GOOGLE BOOKS
       </a>
-      <a className="navbar-brand" href="/search">
-        Search
+    
+        <a className="navbar-brand" href="/search">
+          Search
       </a>
+     
+ 
       <a className="navbar-brand" href="/saved">
         Saved
       </a>
+    
     </nav>
   );
 }

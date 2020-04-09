@@ -7,3 +7,8 @@
 .bookSearch{
     font-size: 20px;
 }
+
+.searchBtn :hover{
+    background-color: #E67E22;
+    color: #223a5e;
+}

@@ -1,7 +1,7 @@
 .BookResults {
-    border: solid;
-    border-color: black;
-    border-width: 3px;
+    border: outset;
+    border-color: #223a5e;
+    border-width: 5px;
     background-color: white;
     padding: 15px;
 }

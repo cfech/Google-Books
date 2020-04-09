@@ -6,7 +6,7 @@ function Result(props) {
 
     return (
         <div className="results col-12">
-            <p>Results</p>
+            <h3>Results</h3>
             {props.books.map(item =>
                 <BookCard key={item.id} name={item.volumeInfo.title} subtitle={item.volumeInfo.subtitle} description={item.volumeInfo.description} link={item.accessInfo.webReaderLink} author= {item.volumeInfo.authors}
 

@@ -1,9 +1,9 @@
 .myJumboTron {
-    height: 250px;
+    height: 150px;
     text-align: center;
     padding-top: 100px;
     margin-top: 40px;
-    background-image: url("https://unsplash.com/photos/Oaqk7qqNh_c");
+    background-image: url(https://unsplash.com/photos/6pO3QFkk7hQ);
     background-size: cover;
     height: 100%;
 }

@@ -1,10 +1,12 @@
 .BookResults{
     border: solid;
-    border-color: black;
+    border-color: #223a5e;
     border-width: 3px;
 
     padding: 15px;
-    background-color: white;
+    /* background-color: white; */
+    background: linear-gradient(to bottom, white 0%, rgb(181, 179, 179) 100%)
+    
    
 }
 
@@ -15,4 +17,26 @@
 img{
     max-width: auto;
     max-height: 267px;
+}
+
+.authorName{
+    font-size: 20px;
+}
+
+.description{
+    font-family: 'Gotu', sans-serif;
+}
+
+.saveBtn, .viewBtn{
+    margin: 5px;
+}
+
+.viewBtn :hover{
+    background-color: #E67E22;
+    color: #223a5e;
+}
+
+.saveBtn :hover{
+    background-color: #E67E22;
+    color: #223a5e;
 }

@@ -1,8 +1,8 @@
 .savedResults{
     height: auto;
-    border: solid;
-    border-color: black;
-    border-width: 5px;
+    border: outset;
+    border-color: #223a5e;
+    border-width: 10px;
     max-height: 700px;
     overflow-y: auto;
     margin-top: 60px;
