@@ -25,7 +25,8 @@ function App() {
 
           <Route exact path="/" component= {Homepage} />
           <Route exact path="/search" component={Homepage} />
-          <Route exact path="/saved" component={Saved } />
+          <Route exact path="/saved" component={Saved} />
+          <Route exact path="*" component={Homepage} />
 
         </Switch>
         <Footer />
