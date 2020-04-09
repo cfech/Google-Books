@@ -9,3 +9,8 @@
 .padL {
     padding-left: 10px;
 }
+
+img{
+    max-width: auto;
+    max-height: 267px;
+}

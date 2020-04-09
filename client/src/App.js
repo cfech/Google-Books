@@ -17,31 +17,31 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <div>
+    <BrowserRouter>
+      <div>
 
-    //     <Nav />
-    //     <Switch>
+        <Nav />
+        <Switch>
 
-    //       <Route exact path="/" component={<Homepage />} />
-    //       <Route exact path="/search" component={<Homepage />} />
-    //       <Route exact path="/saved" component={<Saved />} />
+          <Route exact path="/" component= {Homepage} />
+          <Route exact path="/search" component={Homepage} />
+          <Route exact path="/saved" component={Saved } />
 
-    //     </Switch>
-    //     <Footer />
-    //   </div>
-    // </BrowserRouter>
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
     
-    <div>
+    // <div>
 
-      <Nav />
+    //   <Nav />
 
 
-        <Homepage />
+    //     <Homepage />
 
    
-      <Footer />
-    </div>
+    //   <Footer />
+    // </div>
 
   );
 }

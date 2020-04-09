@@ -8,28 +8,16 @@ import API from "../components/API"
 
 
 function Home() {
-    // Setting our component's initial state
+        // Setting our component's initial state
 
-    // componentDidMount() {
-    //     API.ApiSearch()
-    //         .then(res => {
-
-    //             console.log(res.data.items)
-    //         }).catch(err => console.log(err))
-    // }
-    const [searchTerm, setSearchTerm] = useState("")
-
+    const [searchTerm, setSearchTerm] = useState("Harry Potter")
 
     const handleInputChange = event => {
         setSearchTerm(event.target.value)
-
         console.log(searchTerm)
     }
 
-
-
     const [books, setBooks] = useState([])
-
 
     const ApiSearch = () => {
         API.ApiSearch(searchTerm)
@@ -43,33 +31,26 @@ function Home() {
         event.preventDefault()
         ApiSearch()
     }
-    // useEffect(() => {
 
-    // },[])
-
-
+    useEffect(() => {
+        ApiSearch()
+    }, [])
 
     return (
         <Container fluid>
             <Row>
                 <Col size="md-12">
-                    <Jumbotron />
+                    <Jumbotron className = "m-2" />
                 </Col>
             </Row>
             <Row>
                 <Col size="md-12">
-                    <Search handleInputChange={handleInputChange}  searchTerm={searchTerm} handleSubmit={handleSubmit} />
+                    <Search handleInputChange={handleInputChange} searchTerm={searchTerm} handleSubmit={handleSubmit} />
                 </Col>
             </Row>
-
-            <Results books={books}/>
-
-
-
+            <Results books={books} />
         </Container>
     );
 }
-
-
 
 export default Home;

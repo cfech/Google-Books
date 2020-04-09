@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+require("dotenv").config()
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,10 +16,13 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
+
+console.log("Username" , process.env.DBUser)
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleBooks");
+mongoose.connect(process.env.MONGODB_URI || `mongodb://${process.env.DBUser}:${process.env.DBPass}@ds041934.mlab.com:41934/heroku_0zq0xjxh`);
+
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

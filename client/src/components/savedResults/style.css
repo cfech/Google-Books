@@ -1,8 +1,9 @@
-.results{
+.savedResults{
     height: auto;
     border: solid;
     border-color: black;
     border-width: 5px;
-    max-height: 600px;
+    max-height: 700px;
     overflow-y: auto;
+    margin-top: 60px;
 }

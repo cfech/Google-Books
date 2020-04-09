@@ -3,10 +3,25 @@ import Jumbotron from "../components/Jumbotron/index"
 import { Col, Row, Container } from "../components/Grid";
 // import Search from "../components/search"
 import SavedResults from "../components/savedResults/index"
+import Api from "../utils/API"
 
 
 function Saved() {
+const [savedBooks , setSavedBooks]= useState([])
 
+    useEffect(() => {
+
+        Api.getBooks().then(({ data }) => {
+            console.log(data)
+            setSavedBooks(data)
+        }).catch(err => console.log(err))
+    },[])
+
+
+    // const handleSubmit = event => {
+    //     event.preventDefault()
+    //     ApiSearch()
+    // }
 
     return (
         <Container fluid>
@@ -15,7 +30,7 @@ function Saved() {
                     <Jumbotron />
                 </Col>
             </Row>
-            <SavedResults />
+            <SavedResults savedBooks={savedBooks} />
         </Container>
     );
 }

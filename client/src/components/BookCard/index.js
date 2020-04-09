@@ -1,7 +1,17 @@
 import React from "react";
 import "./style.css";
+import Api from "../../utils/API"
 
 function BookCard({ name, subtitle, author, image, description, link }) {
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        Api.saveBook({
+            name, subtitle, author, image, description, link
+        })
+    }
+
+
     return (
         <div className="BookResults col-12 mb-3">
 
@@ -13,7 +23,7 @@ function BookCard({ name, subtitle, author, image, description, link }) {
                 <form action={link}>
                     <input type="submit" value="View" />
                 </form>
-                <button className="float-right">Save</button>
+                <button className="float-right" onClick={handleSubmit}>Save</button>
             </div>
 
             <div className="row padL">

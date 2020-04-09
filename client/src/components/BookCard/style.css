@@ -5,6 +5,7 @@
 
     padding: 15px;
     background-color: white;
+   
 }
 
 .padL{
@@ -12,6 +13,6 @@
 }
 
 img{
-    min-width: 196px;
-    min-height: 267px;
+    max-width: auto;
+    max-height: 267px;
 }
