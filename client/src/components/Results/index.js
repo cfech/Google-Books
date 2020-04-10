@@ -16,8 +16,8 @@ function Result(props) {
                             ?
                             item.volumeInfo.imageLinks.smallThumbnail
                             :
-                            "https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg"} 
-                handleSave = {props.handleSave}/>
+                            "https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg"}
+                    handleSave={props.handleSave} />
             )}
         </div>
     );

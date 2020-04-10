@@ -64,7 +64,7 @@ function Home() {
                     <Search handleInputChange={handleInputChange} searchTerm={searchTerm} handleSubmit={handleSubmit} />
                 </Col>
             </Row>
-            
+
             {saved ?
                 <div className="alert alert-success " role="alert">
                     Saved!
@@ -72,7 +72,7 @@ function Home() {
                 :
                 null
             }
-            
+
             <Results books={books} handleSave={handleSave} />
         </Container>
     );
